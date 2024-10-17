@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Número 1</label><input id="txtNro1" type="text"><br>
+    <label>Número 2</label><input id="txtNro2" type="text"><br>
+    <button id="btnSumar" type="submit" style="color: blue;" onclick="Sumar()">Sumar</button><br>
+    <input id="txtResultado" type="text">
+<script>
+    function Sumar(){
+        let nro1 = parseFloat(document.getElementById("txtNro1").value);
+        let nro2 = parseFloat(document.getElementById("txtNro2").value);
+        let suma = nro1 + nro2;
+        alert(suma);
+        console.log(suma);
+        document.getElementById("txtResultado").value = suma;
+    }
+
+    document.getElementById("btnSumar").setAttribute("onclick","Sumar");
+</script>
+</body>
+</html>
